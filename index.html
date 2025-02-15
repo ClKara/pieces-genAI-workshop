@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Information</title>
+    <style>
+        /* style.css */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333; /* Dark text color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #4a90e2; /* Blue color for the header */
+            text-align: center;
+        }
+
+        p {
+            font-size: 18px; /* Larger font size for the paragraph */
+            line-height: 1.5; /* Increased line height for readability */
+            text-align: center; /* Center the paragraph text */
+        }
+
+        button {
+            background-color: #4caf50; /* Green background for the button */
+            color: white; /* White text color */
+            border: none; /* Remove border */
+            padding: 10px 20px; /* Padding around the button */
+            text-align: center; /* Center the button text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Make the button inline */
+            font-size: 16px; /* Font size for the button */
+            margin: 10px 2px; /* Margin around the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+    <script>
+        // script.js
+
+        const text = {
+            thirdPlanet: "Earth is the third planet in our solar system, orbiting the Sun at an average distance of about 93 million miles (150 million kilometers). This position allows Earth to receive the right amount of sunlight to sustain life.",
+            waterCoverage: "Approximately 71% of Earth's surface is covered by water, primarily in the form of oceans. The Pacific Ocean is the largest, covering more area than all the landmasses combined. Only about 3% of Earth's water is freshwater, with the majority locked in glaciers and ice caps.",
+            atmosphericComposition: "Earth's atmosphere is a complex mixture of gases, primarily nitrogen (78%) and oxygen (21%), with trace amounts of argon, carbon dioxide, and other gases. This unique composition is essential for life, as it provides the oxygen we breathe and protects us from harmful solar radiation.",
+            biodiversity: "Earth is home to an estimated 8.7 million species of plants and animals, with a significant portion still undiscovered. This biodiversity is crucial for ecosystem stability, providing services such as pollination, nutrient cycling, and climate regulation.",
+            bluePlanet: "Often referred to as the 'Blue Planet,' Earth appears blue from space due to the vast oceans that dominate its surface. The color is also influenced by the scattering of sunlight by the atmosphere and the presence of phytoplankton in the water.",
+            plateTectonics: "Earth's lithosphere is divided into tectonic plates that float on the semi-fluid asthenosphere beneath. The movement of these plates causes geological phenomena such as earthquakes, volcanic eruptions, and the formation of mountain ranges.",
+            goldilocksZone: "Earth is located in the 'Goldilocks Zone,' a region around the Sun where conditions are just right for liquid water to exist. This zone is critical for maintaining the temperatures necessary for life as we know it.",
+            ageOfEarth: "Earth is approximately 4.5 billion years old, formed from the solar nebula—a cloud of gas and dust. Radiometric dating of the oldest rocks and meteorites provides evidence for this age, helping scientists understand the planet's formation and evolution.",
+            seasonalChanges: "The tilt of Earth's axis (about 23.5 degrees) is responsible for the changing seasons. As Earth orbits the Sun, different parts of the planet receive varying amounts of sunlight, leading to seasonal variations in temperature and daylight.",
+            naturalSatellite: "Earth has one natural satellite, the Moon, which is the fifth largest moon in the solar system. The Moon plays a significant role in influencing ocean tides due to its gravitational pull and has been a focal point for human exploration and study."
+        };
+
+        function changeText() {
+            const randomIndex = Math.floor(Math.random() * Object.keys(text).length);
+            const selectedText = Object.values(text)[randomIndex];
+            document.getElementById("myParagraph").innerText = selectedText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to Earth Information</h1>
+    <p id="myParagraph">This is the original text.</p>
+    <button onclick="changeText()">Change Text</button>
+</body>
+</html>
